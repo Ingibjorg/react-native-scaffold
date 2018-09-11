@@ -1,0 +1,40 @@
+{
+  "name": "ReactNativeScaffold",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest --env=jsdom --coverage",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepush": "yarn install && eslint --max-warnings=0 . && yarn jest --env=jsdom --coverage"
+  },
+  "dependencies": {
+    "react": "16.4.1",
+    "react-native": "0.56.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.1",
+    "babel-jest": "23.6.0",
+    "babel-preset-airbnb": "^2.6.0",
+    "babel-preset-react-native": "^5",
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-react-native": "^3.3.0",
+    "husky": "^0.14.3",
+    "jest": "23.6.0",
+    "prettier-eslint": "^8.8.2",
+    "prettier-eslint-cli": "^4.7.1",
+    "react-test-renderer": "16.4.1"
+  },
+  "jest": {
+    "preset": "react-native",
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
+    }
+  }
+}
